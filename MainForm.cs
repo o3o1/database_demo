@@ -94,8 +94,8 @@ namespace database_demo
                 {
                     selectedRow = dgStudent.SelectedRows[i];
                     Id = Convert.ToInt32(selectedRow.Cells[0].Value);
-                    string addStr = $"DELETE FROM students where Id={Id};";
-                    cmd = new SQLiteCommand(addStr, conn);
+                    string delStr = $"DELETE FROM students where Id={Id};";
+                    cmd = new SQLiteCommand(delStr, conn);
                     cmd.ExecuteNonQuery();
                 }
                 RefreshStudentData();
